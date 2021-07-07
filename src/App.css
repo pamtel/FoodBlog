@@ -10,9 +10,8 @@ body {
 
 .card {
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-top-right-radius: 2rem;
-  /* border-bottom-left-radius: 2rem; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-bottom-left-radius: 1.5rem;
 }
 
 .img-box {
@@ -25,8 +24,14 @@ body {
   width: 100%;
   object-fit: cover;
   object-position: center;
+  border-top-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
 }
 
-/* .card-body{
-  border-bottom-left-radius: 2rem !important;
-} */
+.icon, .line {
+  background-color: #fa9e0d;
+}
+
+.starIcon {
+  color: #fa9e0d;
+}

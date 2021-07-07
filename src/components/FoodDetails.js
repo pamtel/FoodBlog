@@ -22,7 +22,7 @@ const FoodDetails = () => {
   }, []);
   console.log("foods :", foods);
   return (
-    <div className="container">
+    <div className="py-5 px-5 md:px-10 lg:px-20">
       <FoodList />
     </div>
   );

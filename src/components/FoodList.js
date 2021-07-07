@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import StarIcon from "@material-ui/icons/Star";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
-// import StarHalfIcon from '@material-ui/icons/StarHalf';
+import AddIcon from '@material-ui/icons/Add';
 
 const FoodList = () => {
   const foods = useSelector((state) => state.allFoods.foods);
@@ -11,30 +11,37 @@ const FoodList = () => {
       meal;
     return (
       <div key={id} className="">
-        <div className="card ">
+        <div className="card rounded-tr-3xl">
           <div className="img-box">
             <img src={strMealThumb} alt={title} className="card-img-top" />
           </div>
-          <div className="card-body mt-3">
-            <div className="d-flex justify-content-between">
-              <h4 className="card-title">{strMeal}</h4>
-              <h4 className="card-text">{price}</h4>
+          <div className="p-5">
+            <div className="flex justify-between pb-4 text-xl font-bold text-gray-700">
+              <p>{strMeal}</p>
+              <p>{price}</p>
             </div>
-            <p className="card-text">{description.substring(0, 100)}...</p>
-            <div>
+            <p className="text-gray-500 pb-6">{description.substring(0, 100)}...</p>
+          </div>
+          <div className="flex justify-between">
+            <div className="pl-5 flex items-center">
               {ratings}
               {Object.values({ ratings }).map((_, index) => {
-                return <StarIcon key={index} />;
+                return <StarIcon key={index} className="starIcon" />;
               })}
             </div>
-          </div>
+            <div className="icon text-white rounded-tl-3xl">
+              <div  className="py-5 px-10">
+              <AddIcon fontSize="large" />
+              </div>
+            </div>
+            </div>
         </div>
       </div>
     );
   });
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {renderItems ? renderItems : <h3>Data Loading...</h3>}
+      {renderItems ? renderItems : <h3 className="text-2xl font-bold">Data Loading...</h3>}
     </div>
   );
 };
