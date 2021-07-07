@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import StarIcon from "@material-ui/icons/Star";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
+// import StarBorderIcon from "@material-ui/icons/StarBorder";
 import AddIcon from '@material-ui/icons/Add';
 
 const FoodList = () => {

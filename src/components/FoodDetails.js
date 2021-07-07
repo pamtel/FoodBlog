@@ -19,8 +19,8 @@ const FoodDetails = () => {
 
   useEffect(() => {
     fetchFoods();
-  }, []);
-  console.log("foods :", foods);
+  });
+//   console.log("foods :", foods);
   return (
     <div className="py-5 px-5 md:px-10 lg:px-20">
       <FoodList />
