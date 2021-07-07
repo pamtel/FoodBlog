@@ -18,9 +18,8 @@ const FoodDetails = () => {
   };
 
   useEffect(() => {
-    fetchFoods();
+    fetchFoods([foods]);
   });
-  console.log("foods :", foods);
   return (
     <div className="py-5 px-5 md:px-10 lg:px-20">
       <FoodList />
