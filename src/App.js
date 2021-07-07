@@ -6,9 +6,9 @@ import SingleFood from "./components/SingleFood";
 
 function App() {
   return (
-    <div className="App">
+    <div className="py-5 px-5 md:px-10 lg:px-20 ">
       <Router>
-        <h1>Food Blog</h1>
+        <h2 className="text-center py-5 uppercase text-2xl font-bold">Food Blog</h2>
         <Switch>
           <Route path="/" exact component={FoodDetails} />
           <Route path="/food/:foodId" exact component={SingleFood} />

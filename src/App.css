@@ -1,3 +1,32 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.card {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-top-right-radius: 2rem;
+  /* border-bottom-left-radius: 2rem; */
+}
+
+.img-box {
+  height: 300px;
+  width: 100%;
+}
+
+.img-box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* .card-body{
+  border-bottom-left-radius: 2rem !important;
+} */
