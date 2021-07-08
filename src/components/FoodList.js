@@ -1,8 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import StarIcon from "@material-ui/icons/Star";
-// import StarBorderIcon from "@material-ui/icons/StarBorder";
-import AddIcon from '@material-ui/icons/Add';
+import AddIcon from "@material-ui/icons/Add";
+import Rate from "./Rate";
 
 const FoodList = () => {
   const foods = useSelector((state) => state.allFoods.foods);
@@ -20,28 +19,31 @@ const FoodList = () => {
               <p>{strMeal}</p>
               <p>{price}</p>
             </div>
-            <p className="text-gray-500 pb-6">{description.substring(0, 100)}...</p>
+            <p className="text-gray-500 pb-6">
+              {description.substring(0, 100)}...
+            </p>
           </div>
           <div className="flex justify-between">
             <div className="pl-5 flex items-center">
-              {ratings}
-              {Object.values({ ratings }).map((_, index) => {
-                return <StarIcon key={index} className="starIcon" />;
-              })}
+              <Rate itemRate={ratings} />
             </div>
             <div className="icon text-white rounded-tl-3xl">
-              <div  className="py-5 px-10">
-              <AddIcon fontSize="large" />
+              <div className="py-5 px-10">
+                <AddIcon fontSize="large" />
               </div>
             </div>
-            </div>
+          </div>
         </div>
       </div>
     );
   });
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {renderItems ? renderItems : <h3 className="text-2xl font-bold">Data Loading...</h3>}
+      {renderItems ? (
+        renderItems
+      ) : (
+        <h3 className="text-2xl font-bold">Data Loading...</h3>
+      )}
     </div>
   );
 };
